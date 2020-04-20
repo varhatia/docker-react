@@ -6,4 +6,4 @@ before_install:
     - docker build -t vish0309/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run vish0309/docker-react npm run test -- --coverage
+    - docker run -e CI=true vish0309/docker-react npm run test -- --coverage
